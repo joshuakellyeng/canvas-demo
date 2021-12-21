@@ -83,11 +83,13 @@ class Circle {
         this.radius = radius
         //this will be our circle method
         this.draw = function() {
+            c.fillStyle = "pink"
             c.beginPath();
             c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
-            c.strokeStyle = `red`
+            c.strokeStyle = `black`
             c.stroke();
             c.fill()
+            
             
         }
         this.update = function() {
@@ -126,8 +128,6 @@ for(var i = 0; i < 100; i++) {
     //this variable will determine the directional velocity
     var dx = (Math.random() - 0.5);
     var dy = (Math.random() - 0.5);
-
-
     circleArray.push(new Circle(x,y,dx,dy,radius))
 
 }
